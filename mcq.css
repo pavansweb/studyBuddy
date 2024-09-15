@@ -91,14 +91,12 @@ input:checked + .slider .moon-icon {
 /* Center box styles */
 .center-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 1rem;
 }
 
 /* Chapter menu styles */
 .chapter-menu {
-    width: 25%;
+    width: fit-content;
     padding: 1rem;
     border-right: 1px solid #ddd;
     background-color: #eee;
@@ -130,9 +128,13 @@ input:checked + .slider .moon-icon {
 }
 
 /* MCQ section styles */
+.chapter-box{
+    height: 100vh;
+    overflow-y: scroll;
+}
 .mcq-section {
-    width: 70%;
-    padding: 1rem;
+    width: auto;
+    padding: 2rem;
     background-color: #fff;
     margin-bottom: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
