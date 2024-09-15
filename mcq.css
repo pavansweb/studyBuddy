@@ -117,6 +117,7 @@ input:checked + .slider .moon-icon {
   
   .chapter-menu li {
     margin-bottom: 0.8rem;
+    border: 1px solid #444;
   }
   
   .chapter-menu a {
