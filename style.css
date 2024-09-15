@@ -1,0 +1,243 @@
+/* CSS Variables for Themes */
+:root {
+    --background-color-light: #f7f8fa; /* Softer light background */
+    --text-color-light: #2d3e50; /* Slightly softer dark text */
+    --subject-bg-light: #e9ecef; /* Muted gray for subjects */
+    --subject-hover-light: #d1d3d8; /* Slightly darker on hover */
+    --box-shadow-light: rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    --box-shadow-hover-light: rgba(0, 0, 0, 0.15); /* More pronounced on hover */
+    
+    --background-color-dark: #1c1c1c;
+    --text-color-dark: #f5f5f5;
+    --subject-bg-dark: #2a2a2a;
+    --subject-hover-dark: #444;
+    --box-shadow-dark: rgba(0, 0, 0, 0.3);
+    --box-shadow-hover-dark: rgba(0, 0, 0, 0.5);
+    --hover-dark: #444;
+    --hover-light: #4a98f7;
+}
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Navbar styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--hover-light);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: relative;
+}
+
+#darkModeToggle {
+    display: none;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sun-icon, .moon-icon {
+    font-size: 20px;
+    display: none;
+}
+
+.sun-icon {
+    color: #ffcc00;
+}
+
+.moon-icon {
+    color: #f1c40f;
+}
+
+body.dark-mode .sun-icon {
+    display: inline;
+}
+
+body:not(.dark-mode) .moon-icon {
+    display: inline;
+}
+
+/* Centered box styling */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #fff; /* Soft white for light mode */
+    box-shadow: 0 8px 20px var(--box-shadow-light), 0 16px 30px var(--box-shadow-light);
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+body.dark-mode .center-box {
+    background-color: var(--background-color-dark);
+    box-shadow: 0 8px 20px var(--box-shadow-dark), 0 16px 30px var(--box-shadow-dark);
+}
+
+/* Subject links styling */
+.subjects a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    background-color: var(--subject-bg-light);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--box-shadow-light);
+}
+
+.subjects a:hover {
+    background-color: var(--subject-hover-light);
+    color: #333;
+    box-shadow: 0 8px 25px var(--box-shadow-hover-light);
+}
+
+body.dark-mode .subjects a {
+    background-color: var(--subject-bg-dark);
+    color: var(--text-color-dark);
+    box-shadow: 0 5px 15px var(--box-shadow-dark);
+}
+
+body.dark-mode .subjects a:hover {
+    background-color: var(--subject-hover-dark);
+    color: #fff;
+    box-shadow: 0 8px 25px var(--box-shadow-hover-dark);
+}
+
+/* Subject toggle (main link) */
+.subject-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.subject-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: var(--subject-bg-light);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subject-toggle:hover {
+    background-color: var(--subject-hover-light);
+}
+
+body.dark-mode .subject-toggle {
+    background-color: var(--subject-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .subject-toggle:hover {
+    background-color: var(--hover-dark);
+}
+
+/* Arrow for toggle */
+.arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.subject-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+.subject-item.active .subject-options {
+    display: block;
+}
+
+/* Options under subjects (initially hidden) */
+.subject-options {
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.subject-options a {
+    display: block;
+    padding: 8px;
+    background-color: var(--subject-bg-light);
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subject-options a:hover {
+    background-color: var(--subject-hover-light);
+}
+
+body.dark-mode .subject-options a {
+    background-color: var(--subject-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .subject-options a:hover {
+    background-color: var(--hover-dark);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 480px) {
+    .center-box {
+        width: 90%;
+    }
+}

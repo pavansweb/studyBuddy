@@ -1,0 +1,350 @@
+/* Reset styles for a more consistent base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 2rem;
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url('https://i.postimg.cc/Fz2hR18L/pavan-logo.png') no-repeat center/cover;
+}
+
+.nav h {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Dark Mode Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.sun-icon, .moon-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.sun-icon {
+    left: 10px;
+}
+
+.moon-icon {
+    right: 10px;
+}
+
+input:checked + .slider .sun-icon {
+    display: none;
+}
+
+input:checked + .slider .moon-icon {
+    color: #ffc107;
+}
+
+/* Center box styles */
+.center-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/* Chapter menu styles */
+.chapter-menu {
+    width: 25%;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    background-color: #eee;
+}
+
+.chapter-menu h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.chapter-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chapter-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.chapter-menu a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.chapter-menu a:hover {
+    color: #007bff;
+}
+
+/* MCQ section styles */
+.mcq-section {
+    width: 70%;
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.mcq-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.mcq-question {
+    margin-bottom: 1rem;
+}
+
+.mcq-question p {
+    margin-bottom: 0.5rem;
+}
+
+.mcq-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mcq-options button {
+    flex: 1 1 calc(50% - 1rem);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.mcq-options button:hover {
+    background-color: #ddd;
+}
+
+.mcq-options button.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.mcq-options button.wrong {
+    background-color: #dc3545;
+    color: white;
+}
+
+.feedback {
+    margin-top: 0.5rem;
+    color: green;
+}
+
+.show-answer {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.show-answer:hover {
+    text-decoration: underline;
+}
+
+.answer {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .center-box {
+        flex-direction: column;
+    }
+    .chapter-menu {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1rem;
+    }
+    .mcq-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links li {
+        margin-bottom: 0.5rem;
+    }
+    .chapter-menu, .mcq-section {
+        width: 100%;
+    }
+    .mcq-options button {
+        flex: 1 1 100%;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode .nav {
+    background-color: #333;
+    color: #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav .logo {
+    background: url('https://i.postimg.cc/Fz2hR18L/pavan-logo.png') no-repeat center/cover;
+}
+body.dark-mode h,body.dark-mode h1,body.dark-mode h2,body.dark-mode h3{
+    color: #e0e0e0;
+}
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #4a98f7;
+}
+
+body.dark-mode .chapter-menu {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .chapter-menu h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .chapter-menu a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .chapter-menu a:hover {
+    color: #4a98f7;
+}
+
+body.dark-mode .mcq-section {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .mcq-options button {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .mcq-options button:hover {
+    background-color: #555;
+}
+
+body.dark-mode .feedback {
+    color: #28a745;
+}
+
+body.dark-mode .show-answer {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .show-answer:hover {
+    background-color: #555;
+}
