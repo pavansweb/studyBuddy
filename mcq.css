@@ -98,6 +98,8 @@ input:checked + .slider .moon-icon {
 .chapter-menu {
     width: fit-content;
     padding: 1rem;
+    overflow-y: scroll;
+    height: 100vh;
     border-right: 1px solid #ddd;
     background-color: #eee;
     border-radius: 8px; /* Add rounded corners */
@@ -117,7 +119,7 @@ input:checked + .slider .moon-icon {
   
   .chapter-menu li {
     margin-bottom: 0.8rem;
-    border: 1px solid #444;
+    border: 1px dotted #444;
   }
   
   .chapter-menu a {
