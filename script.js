@@ -19,11 +19,7 @@ darkModeToggle.addEventListener('change', () => {
     }
 });
 
-// Persist dark mode based on previous preference
-if (localStorage.getItem("dark-mode") === "enabled") {
-    toggle.checked = true;
-    body.classList.add("dark-mode");
-}
+
 
 document.querySelectorAll('.subject-toggle').forEach(item => {
     item.addEventListener('click', function(e) {

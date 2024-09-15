@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <base href="/studyBuddy/">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/base.css">
 </head>
 <body>
 
@@ -31,7 +32,7 @@
         <h2>Subjects</h2>
         <div class="subjects">
             <div class="subject-item">
-                <a href="#" class="subject-toggle">History <span class="arrow">&#9654;</span></a>
+                <a class="subject-toggle">History <span class="arrow">&#9654;</span></a>
                 <div class="subject-options">
                     <a href="/history/mcq/">MCQs</a>
                     <a href="/history/qa">Questions & Answers</a>
@@ -40,7 +41,7 @@
             </div>
     
             <div class="subject-item">
-                <a href="#" class="subject-toggle">Geography <span class="arrow">&#9654;</span></a>
+                <a class="subject-toggle">Geography <span class="arrow">&#9654;</span></a>
                 <div class="subject-options">
                     <a href="/geography/mcq/">MCQs</a>
                     <a href="#">Questions & Answers</a>
@@ -49,7 +50,7 @@
             </div>
     
             <div class="subject-item">
-                <a href="#" class="subject-toggle">Physics <span class="arrow">&#9654;</span></a>
+                <a class="subject-toggle">Physics <span class="arrow">&#9654;</span></a>
                 <div class="subject-options">
                     <a href="#">MCQs</a>
                     <a href="#">Questions & Answers</a>
@@ -58,7 +59,7 @@
             </div>
 
             <div class="subject-item">
-                <a href="#" class="subject-toggle">Chemistry <span class="arrow">&#9654;</span></a>
+                <a class="subject-toggle">Chemistry <span class="arrow">&#9654;</span></a>
                 <div class="subject-options">
                     <a href="#">MCQs</a>
                     <a href="#">Questions & Answers</a>
@@ -67,7 +68,7 @@
             </div>
     
             <div class="subject-item">
-                <a href="#" class="subject-toggle">Biology <span class="arrow">&#9654;</span></a>
+                <a class="subject-toggle">Biology <span class="arrow">&#9654;</span></a>
                 <div class="subject-options">
                     <a href="#">MCQs</a>
                     <a href="#">Questions & Answers</a>
@@ -76,12 +77,25 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
 
-    
     <script src="/script.js"></script>
+    <script>
+        // JavaScript to handle dropdown menu
+        document.querySelectorAll('.subject-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
+                // Toggle the visibility of the subject-options
+                const subjectOptions = this.nextElementSibling;
+                const arrow = this.querySelector('.arrow');
+
+                if (subjectOptions.style.display === 'block') {
+                    subjectOptions.style.display = 'none';
+                    arrow.innerHTML = '&#9654;'; // Right arrow
+                } else {
+                    subjectOptions.style.display = 'block';
+                    arrow.innerHTML = '&#9660;'; // Down arrow
+                }
+            });
+        });
+    </script>
 </body>
 </html>

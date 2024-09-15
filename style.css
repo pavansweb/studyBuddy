@@ -36,37 +36,6 @@ body.dark-mode {
     color: var(--text-color-dark);
 }
 
-/* Navbar styling */
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
-    color: #fff;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #fff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--hover-light);
-}
 
 /* Dark Mode Toggle */
 .dark-mode-toggle {
