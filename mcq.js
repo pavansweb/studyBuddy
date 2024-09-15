@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const chapterLinks = document.querySelectorAll('.chapter-menu a');
-
-    chapterLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    });
 
     // MCQ Feedback System
     document.querySelectorAll('.mcq-options button').forEach(button => {
