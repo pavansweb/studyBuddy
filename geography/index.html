@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MCQ Page</title>
+    <title>Geography</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/studyBuddy/mcq.css">
+    <link rel="stylesheet" href="/studyBuddy/subject.css">
     <link rel="stylesheet" href="/studyBuddy/base.css">
 
 </head>
@@ -31,6 +31,9 @@
     <div class="center-box">
         <div class="chapter-menu">
             <h2>Select Chapter</h2>
+            
+            <div class="score">Correct: 0, Wrong: 0</div> 
+            <button class="clear-scores">Clear Scores</button>
             <ul>
                 <li><a href="#chapter7">Chapter 7: Climate</a></li>
                 <li><a href="#chapter8">Chapter 8: Soil Resources</a></li>
@@ -41,11 +44,12 @@
                 <li><a href="#chapter13">Chapter 13: Non-Convectional Source of Energy </a></li>
                 <li><a href="#chapter20">Chapter 20: Transport </a></li>
                 <li><a href="#chapter21">Chapter 21: Waste Managment - 1 </a></li>
-                <li><a href="#chapter22">Chapter 22: Non-Convectional Source of Energy </a></li>
+                <li><a href="#chapter22">Chapter 22: Waste Managment - 2 </a></li>
             </ul>
         </div>
 
         <div class="chapter-box">
+            <div id="top"></div>
 
             <div id="chapter7" class="mcq-section">
                 <h3>Chapter 7: Climate</h3>
@@ -275,6 +279,23 @@
                 </div>
 
             </div>
+
+            <!-- <div id="questions-answers-section" class="qa-section">
+                <h3>Questions and Answers for chapter 7</h3>
+            
+                <div class="qa-question">
+                    <p><strong>1)</strong> What are the major types of soil found in India?</p>
+                    <div class="show-answer-qa">Show Answer</div>
+                    <div class="answer-qa" style="display:none;">The major types of soil in India are Alluvial soil, Black soil, Red soil, Laterite soil, Mountain soil, Desert soil, and Peaty soil.</div>
+                </div>
+            
+                <div class="qa-question">
+                    <p><strong>2)</strong> What factors influence the climate of India?</p>
+                    <div class="show-answer-qa">Show Answer</div>
+                    <div class="answer-qa" style="display:none;">The climate of India is influenced by factors like latitude, altitude, pressure and winds, distance from the sea, and ocean currents.</div>
+                </div>
+            </div> -->
+            
 
             <div id="chapter8" class="mcq-section">
                 <h3>Chapter 8: Soil Resources</h3>
@@ -873,8 +894,8 @@
                         quality minerals.</p>
                     <div class="mcq-options">
                         <button data-answer="wrong">equal</button>
-                        <button data-answer="wrong">lesser</button>
-                        <button data-answer="correct">higher</button>
+                        <button data-answer="correct">lesser</button>
+                        <button data-answer="wrong">higher</button>
                         <button data-answer="wrong">poorer</button>
                     </div>
                     <div class="feedback"></div>
@@ -1009,9 +1030,9 @@
                     <p><strong>Question 13:</strong> ................ mineral is used to regulate blood sugar levels and
                         to support the immune system.</p>
                     <div class="mcq-options">
-                        <button data-answer="correct">Manganese</button>
+                        <button data-answer="wrong">Manganese</button>
                         <button data-answer="wrong">Iron ore</button>
-                        <button data-answer="wrong">Mica</button>
+                        <button data-answer="correct">Zinc</button>
                         <button data-answer="wrong">Copper</button>
                     </div>
                     <div class="feedback"></div>
@@ -1648,12 +1669,378 @@
                     <div class="answer" style="display:none;">The correct answer is <strong>Cheap; easily cross barriers.</strong></div>
                 </div>
             </div>
+
+            <div id="chapter21" class="mcq-section">
+                <h3>Chapter 21 - Waste Managment - 1</h3>
+                <div class="mcq-question">
+                    <p><strong>Question 1:</strong> Any material that is discarded after it has served its purpose and is no longer useful is called ................ .</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">compost</button>
+                        <button data-answer="correct">waste</button>
+                        <button data-answer="wrong">manure</button>
+                        <button data-answer="wrong">pathogen</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>waste.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 2:</strong> Any material that is rendered useless during or left over in a manufacturing process is called ................ .</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">industrial waste</button>
+                        <button data-answer="wrong">domestic waste</button>
+                        <button data-answer="wrong">commercial waste</button>
+                        <button data-answer="wrong">mining waste</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>industrial waste.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 3:</strong> Which of the following is NOT a toxic substance present in e-waste?</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Cadmium</button>
+                        <button data-answer="wrong">Lead</button>
+                        <button data-answer="wrong">Mercury</button>
+                        <button data-answer="correct">Methane</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Methane.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 4:</strong> The process of depletion of oxygen from water bodies occurring either naturally or due to human activities is called ................ .</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Biomagnification</button>
+                        <button data-answer="wrong">Oxygenation</button>
+                        <button data-answer="correct">Eutrophication</button>
+                        <button data-answer="wrong">Acid rain</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Eutrophication.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 5:</strong> The increase in the number of phytoplanktons and algae reduces the penetration of ................ , light and heat into the water body.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">small fish</button>
+                        <button data-answer="wrong">nitrogen</button>
+                        <button data-answer="correct">oxygen</button>
+                        <button data-answer="wrong">carbon dioxide</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>oxygen.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 6:</strong> Domestic waste being organic in nature undergoes ................ and creates conditions favorable for the growth of pathogens.</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">fermentation</button>
+                        <button data-answer="wrong">nitrification</button>
+                        <button data-answer="wrong">magnification</button>
+                        <button data-answer="wrong">oxygenation</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>fermentation.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 7:</strong> ................ is a harmful toxin that affects the development of a child's brain.</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">Lead</button>
+                        <button data-answer="wrong">Mercury</button>
+                        <button data-answer="wrong">Cadmium</button>
+                        <button data-answer="wrong">Zinc</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Lead.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 8:</strong> ................ is a chemical that is said to cause cancer.</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">Arsenic</button>
+                        <button data-answer="wrong">Cadmium</button>
+                        <button data-answer="wrong">Calcium</button>
+                        <button data-answer="wrong">Lead</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Arsenic.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 9:</strong> The increase in the concentration of various toxic substances along the food chain is called ................ .</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Eutrophication</button>
+                        <button data-answer="wrong">Bio-accumulation</button>
+                        <button data-answer="correct">Biomagnification</button>
+                        <button data-answer="wrong">Demagnification</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Biomagnification.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 10:</strong> The phenomenon of concentrated toxic deposition at the higher trophic level is known as ................ .</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">Bio-accumulation</button>
+                        <button data-answer="wrong">Biomagnification</button>
+                        <button data-answer="wrong">Eutrophication</button>
+                        <button data-answer="wrong">Biodegradation</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Biomagnification.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 11:</strong> The accumulation of toxins will be higher in which of the following?</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Water</button>
+                        <button data-answer="wrong">Algae</button>
+                        <button data-answer="wrong">Small fish</button>
+                        <button data-answer="correct">Big fish</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Big fish.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 12:</strong> Waste accumulation is a breeding ground for ................ like flies, mosquitoes, rodents, and pet animals.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">hectors</button>
+                        <button data-answer="correct">vectors</button>
+                        <button data-answer="wrong">spreaders</button>
+                        <button data-answer="wrong">carriers</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>vectors.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 13:</strong> Which of the following diseases are NOT spread by houseflies?</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Typhoid</button>
+                        <button data-answer="wrong">Diarrhoea</button>
+                        <button data-answer="wrong">Cholera</button>
+                        <button data-answer="correct">Amoebiosis</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Amoebiosis.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 14:</strong> The warming up of the atmosphere due to the increased concentration of Greenhouse Gases is known as ................ .</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">Global Warming</button>
+                        <button data-answer="wrong">Climate change</button>
+                        <button data-answer="wrong">Acid rain</button>
+                        <button data-answer="wrong">Radiation</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Global Warming.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 15:</strong> Hepatitis, diarrhoea, and corona are ................ diseases.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">bacterial</button>
+                        <button data-answer="correct">viral</button>
+                        <button data-answer="wrong">fungal</button>
+                        <button data-answer="wrong">None of the above</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>viral.</strong></div>
+                </div>
+                
+    
+                
+            </div>
+
+            <div id="chapter22" class="mcq-section">
+                <h3>Chapter 22 - Waste Managment - 2</h3>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 1:</strong> Dry waste consists of waste that is ............... .</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">biodegradable</button>
+                        <button data-answer="correct">non-biodegradable</button>
+                        <button data-answer="wrong">non-toxic</button>
+                        <button data-answer="wrong">organic</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>non-biodegradable.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 2:</strong> Wet waste is the waste that is ............... in nature.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">non-biodegradable</button>
+                        <button data-answer="correct">organic</button>
+                        <button data-answer="wrong">recyclable</button>
+                        <button data-answer="wrong">toxic</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>organic.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 3:</strong> ............... of waste is the key to effective waste management.</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">Segregation</button>
+                        <button data-answer="wrong">Modification</button>
+                        <button data-answer="wrong">Solidification</button>
+                        <button data-answer="wrong">Nitrification</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Segregation.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 4:</strong> Biodegradable waste can be converted into ............... .</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">soil</button>
+                        <button data-answer="wrong">humus</button>
+                        <button data-answer="wrong">rubber</button>
+                        <button data-answer="correct">compost</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>compost.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 5:</strong> ............... is the cheapest method of waste disposal.</p>
+                    <div class="mcq-options">
+                        <button data-answer="correct">Open dumping</button>
+                        <button data-answer="wrong">Sanitary landfill</button>
+                        <button data-answer="wrong">Incineration</button>
+                        <button data-answer="wrong">Recycling</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Open dumping.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 6:</strong> ............... is a way of disposing waste on land without causing health hazards or public safety.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Dumping</button>
+                        <button data-answer="correct">Sanitary landfill</button>
+                        <button data-answer="wrong">Recycling</button>
+                        <button data-answer="wrong">Incineration</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Sanitary landfill.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 7:</strong> ............... is an aerobic method of decomposing solid wastes.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Incineration</button>
+                        <button data-answer="wrong">Recycling</button>
+                        <button data-answer="correct">Composting</button>
+                        <button data-answer="wrong">Dumping</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Composting.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 8:</strong> The organic waste from households undergo ............... to form compost.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">reduction</button>
+                        <button data-answer="wrong">burning</button>
+                        <button data-answer="correct">decomposition</button>
+                        <button data-answer="wrong">churning</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>decomposition.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 9:</strong> Composting rejuvenates poor soils by adding ............... .</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">nutrients</button>
+                        <button data-answer="wrong">manure</button>
+                        <button data-answer="correct">humus</button>
+                        <button data-answer="wrong">oxygen</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>humus.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 10:</strong> ............... process is used for waste disposal by industries and municipalities.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Composting</button>
+                        <button data-answer="wrong">Dumping</button>
+                        <button data-answer="correct">Incineration</button>
+                        <button data-answer="wrong">Segregation</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Incineration.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 11:</strong> Waste can be effectively managed by using three ............... of waste management.</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">S's</button>
+                        <button data-answer="correct">R's</button>
+                        <button data-answer="wrong">C's</button>
+                        <button data-answer="wrong">M's</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>R's.</strong></div>
+                </div>
+                
+                <div class="mcq-question">
+                    <p><strong>Question 12:</strong> Which of the following is Not included in the three R's of waste management?</p>
+                    <div class="mcq-options">
+                        <button data-answer="wrong">Reduce</button>
+                        <button data-answer="wrong">Reuse</button>
+                        <button data-answer="wrong">Recycle</button>
+                        <button data-answer="correct">Regenerate</button>
+                    </div>
+                    <div class="feedback"></div>
+                    <div class="show-answer">Show Answer</div>
+                    <div class="answer" style="display:none;">The correct answer is <strong>Regenerate.</strong></div>
+                </div>
+
+
+                
+            </div>
+
+<button class="scroll-to-top"><a href="#top"  style="padding: 0.2rem;"><span style="font-size: 20px;">&#8593;</span></a></button>
         
           
         </div>
     </div>
 
-    <script src="/studyBuddy/mcq.js"></script>
+    <script src="/studyBuddy/subject.js"></script>
     <script src="/studyBuddy/script.js"></script>
     <script>
 
