@@ -20,21 +20,3 @@ darkModeToggle.addEventListener('change', () => {
 });
 
 
-
-document.querySelectorAll('.subject-toggle').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Close all other subject-items
-        document.querySelectorAll('.subject-item').forEach(otherItem => {
-            if (otherItem !== this.parentElement) {
-                otherItem.classList.remove('active');
-            }
-        });
-
-        // Toggle the clicked one
-        const parent = this.parentElement;
-        parent.classList.toggle('active'); // Toggle active class to show/hide options
-    });
-});
-

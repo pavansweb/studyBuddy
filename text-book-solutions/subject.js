@@ -134,6 +134,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    
+// JavaScript to handle dropdown menu
+document.querySelectorAll('.subject-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+        // Toggle the visibility of the subject-options
+        const subjectOptions = this.nextElementSibling;
+        const arrow = this.querySelector('.arrow');
+
+        if (subjectOptions.style.display === 'block') {
+            subjectOptions.style.display = 'none';
+            arrow.innerHTML = '&#9654;'; // Right arrow
+        } else {
+            subjectOptions.style.display = 'block';
+            arrow.innerHTML = '&#9660;'; // Down arrow
+        }
+    });
+});
+
+
+
+
     document.querySelectorAll('.show-answer').forEach(button => {
         button.addEventListener('click', function () {
             const answer = this.nextElementSibling;

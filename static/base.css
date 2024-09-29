@@ -1,0 +1,129 @@
+/* CSS Variables for Themes */
+:root {
+    --background-color-light: #f7f8fa; /* Softer light background */
+    --text-color-light: #2d3e50; /* Slightly softer dark text */
+    --subject-bg-light: #e9ecef; /* Muted gray for subjects */
+    --subject-hover-light: #d1d3d8; /* Slightly darker on hover */
+    --box-shadow-light: rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    --box-shadow-hover-light: rgba(0, 0, 0, 0.15); /* More pronounced on hover */
+    
+    --background-color-dark: #1c1c1c;
+    --text-color-dark: #f5f5f5;
+    --subject-bg-dark: #2a2a2a;
+    --subject-hover-dark: #444;
+    --box-shadow-dark: rgba(0, 0, 0, 0.3);
+    --box-shadow-hover-dark: rgba(0, 0, 0, 0.5);
+    --hover-dark: #444;
+    --hover-light: #4a98f7;
+}
+
+/* Reset styles for a more consistent base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: relative;
+}
+
+#darkModeToggle {
+    display: none;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sun-icon, .moon-icon {
+    font-size: 20px;
+    display: none;
+}
+
+.sun-icon {
+    color: #ffcc00;
+}
+
+.moon-icon {
+    color: #f1c40f;
+}
+
+body.dark-mode .sun-icon {
+    display: inline;
+}
+
+body:not(.dark-mode) .moon-icon {
+    display: inline;
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+.nav .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url('https://i.postimg.cc/Fz2hR18L/pavan-logo.png') no-repeat center/cover;
+}
+
+.nav h {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+body.dark-mode .nav {
+    background-color: #333;
+    color: #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav .logo {
+    background: url('https://i.postimg.cc/Fz2hR18L/pavan-logo.png') no-repeat center/cover;
+}
+body.dark-mode h,body.dark-mode h1,body.dark-mode h2,body.dark-mode h3{
+    color: #e0e0e0;
+}
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #4a98f7;
+}
